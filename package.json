@@ -10,11 +10,11 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-paginate": "^6.3.0",
-    "react-redux": "^7.0.2",
+    "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-router-redux": "^4.0.8",
-    "react-scripts": "2.1.8",
+    "react-scripts": "^3.0.1",
     "react-thunk": "^1.0.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
@@ -35,5 +35,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/Dyarc96/GOTApp.git",
+  "author": "Dyarc96 <jandyja96@hotmail.com>",
+  "license": "MIT"
 }

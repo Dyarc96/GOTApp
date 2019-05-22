@@ -20,7 +20,7 @@ class App extends React.Component {
                     <h1 className="heading-primary">A song of Ice and Fire</h1>
                     <h2 className="heading-secondary">Fan App</h2>
                 </header>
-                <Router history={history}>
+                <Router history={history} basename={process.env.PUBLIC_URL + '/'}>
                     <Nav className="nav"/>
                     <Route path="/" exact component={WelcomePage} />
                     <Route path="/houses" exact component={Houses} />
