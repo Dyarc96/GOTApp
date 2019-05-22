@@ -1,0 +1,293 @@
+@font-face {
+    font-family: GoTfont;
+    src: url(../img/fonts/Game\ of\ Thrones.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'GoTfont', cursive;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 56.50%;
+}
+
+body {
+    box-sizing: border-box;
+    background: #1e1d1d;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
+    background-size: cover;
+    top: 50px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    /* background:#3E4F59; */
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav__item {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    transition: 0.5s all;
+}
+
+
+.nav__link {
+    color: #ece8e3;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.nav__link:hover {
+    color: white;
+}
+
+.searchbar {
+    position: relative;
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-right: 75px;
+    background-color: #3E4F59;
+    height: 60px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.searchbar__input {
+    outline: none;
+    background: #ededed
+    url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png)
+    no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 10px 10px 10px 32px;
+    width: 45px;
+    height: 45px;
+    -webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+.searchbar__input:hover {
+	background-color: #fff;
+}
+
+.searchbar__input:focus {
+    width: 180px;
+    padding-left: 32px;
+    color: #000;
+    background-color: #fff;
+    cursor: auto;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+input:-moz-placeholder {
+    color: transparent;
+}
+
+input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.list {
+    padding-top: 10px;
+    height: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.card__link {
+    text-decoration: none;
+    font-size: 20px;
+    color:#837045;
+}
+
+.card {
+    width: 120px;
+    height: 180px;
+    border-radius: 2px;
+    background: #ece8e3;
+    padding: 2.5px 2.5px 2.5px 2.5px;
+    margin: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.card__book {
+    width: 150px;
+    height: 140px;
+}
+
+.card-house {
+    width: 150px;
+}
+
+.card__photo-container {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+
+.card__photo {
+    width: 50px;
+    height: 60px;
+}
+
+.paragraph {
+    font-size: 10px;
+    color: black;
+}
+
+.card__header {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.container__landing {
+    height: 100%;
+}
+
+.container__lists {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__map {
+    height: 100%;
+    overflow: auto;
+}
+
+.container__element {
+    justify-content: flex-end;
+    width: 95%;
+    padding: 10px;
+    height: 100%;
+    overflow: auto;
+    background: radial-gradient(ellipse at top,#8c948e, #8a8a8c); 
+}
+
+.header {
+    display: flex;
+    margin: 50px 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heading-primary {
+    letter-spacing: 2.5px;
+    text-align: center;
+    width: 100vw;
+    font-size: 32px;
+    color: 	#837045;
+    padding-bottom: 2.5px;
+}
+
+.heading-primary::after {
+    display: block;
+    content: '';
+    border-bottom: 3px solid white;
+    transform: scaleX(0);
+    transition: transform 500ms ease-in-out;
+}
+
+.heading-primary:hover::after {
+    transform-origin: 0 50%;
+    transform: scaleX(1);
+}
+
+.heading-secondary {
+    font-size: 15px;
+    color: 	#837045;
+}
+
+.map {
+    flex-basis: 80%;
+}
+
+.heading-tertiary {
+    margin: 15px;
+    color: #837045;
+    text-align: center;
+}
+
+.list__item {
+    margin: 15px 0;
+}
+
+.list__link {
+    color: blue;
+    text-decoration: none;
+}
+
+.heading__landing {
+    background-image: linear-gradient(to right, #ed090a 50%, #78140c, #300404);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 30px;
+    text-align: center;
+}
+
+.sub__heading {
+    color: #ece8e3;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .searchbar {
+        align-self: center;
+        margin: 0 auto;
+    }
+}
