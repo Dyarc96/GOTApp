@@ -1,0 +1,16 @@
+{
+  "main.css": "/GOTApp/static/css/main.cd16fe8c.chunk.css",
+  "main.js": "/GOTApp/static/js/main.ab74fa90.chunk.js",
+  "main.js.map": "/GOTApp/static/js/main.ab74fa90.chunk.js.map",
+  "runtime~main.js": "/GOTApp/static/js/runtime~main.d825a4e9.js",
+  "runtime~main.js.map": "/GOTApp/static/js/runtime~main.d825a4e9.js.map",
+  "static/js/2.7c9eee1a.chunk.js": "/GOTApp/static/js/2.7c9eee1a.chunk.js",
+  "static/js/2.7c9eee1a.chunk.js.map": "/GOTApp/static/js/2.7c9eee1a.chunk.js.map",
+  "index.html": "/GOTApp/index.html",
+  "precache-manifest.3e742e716c540d19413d8d06b940fd2b.js": "/GOTApp/precache-manifest.3e742e716c540d19413d8d06b940fd2b.js",
+  "service-worker.js": "/GOTApp/service-worker.js",
+  "static/css/main.cd16fe8c.chunk.css.map": "/GOTApp/static/css/main.cd16fe8c.chunk.css.map",
+  "static/media/App.css": "/GOTApp/static/media/Game of Thrones.3af178ec.ttf",
+  "static/media/open-book.png": "/GOTApp/static/media/open-book.72cbb9d7.png",
+  "static/media/worldMap.png": "/GOTApp/static/media/worldMap.ad946c0a.png"
+}
