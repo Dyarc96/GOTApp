@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/GOTApp/static/css/main.f71e39dc.chunk.css",
-    "main.js": "/GOTApp/static/js/main.5a98c1fe.chunk.js",
-    "main.js.map": "/GOTApp/static/js/main.5a98c1fe.chunk.js.map",
+    "main.css": "/GOTApp/static/css/main.d5bdf7a0.chunk.css",
+    "main.js": "/GOTApp/static/js/main.0d24cce5.chunk.js",
+    "main.js.map": "/GOTApp/static/js/main.0d24cce5.chunk.js.map",
     "runtime~main.js": "/GOTApp/static/js/runtime~main.d825a4e9.js",
     "runtime~main.js.map": "/GOTApp/static/js/runtime~main.d825a4e9.js.map",
-    "static/js/2.a9ff27b7.chunk.js": "/GOTApp/static/js/2.a9ff27b7.chunk.js",
-    "static/js/2.a9ff27b7.chunk.js.map": "/GOTApp/static/js/2.a9ff27b7.chunk.js.map",
+    "static/js/2.a6917e2a.chunk.js": "/GOTApp/static/js/2.a6917e2a.chunk.js",
+    "static/js/2.a6917e2a.chunk.js.map": "/GOTApp/static/js/2.a6917e2a.chunk.js.map",
     "index.html": "/GOTApp/index.html",
-    "precache-manifest.dced727c2f74a14cb33d543211a3d531.js": "/GOTApp/precache-manifest.dced727c2f74a14cb33d543211a3d531.js",
+    "precache-manifest.cb364e2ac2ab3ab6413072a5f6165249.js": "/GOTApp/precache-manifest.cb364e2ac2ab3ab6413072a5f6165249.js",
     "service-worker.js": "/GOTApp/service-worker.js",
-    "static/css/main.f71e39dc.chunk.css.map": "/GOTApp/static/css/main.f71e39dc.chunk.css.map",
+    "static/css/main.d5bdf7a0.chunk.css.map": "/GOTApp/static/css/main.d5bdf7a0.chunk.css.map",
+    "static/media/001-home.svg": "/GOTApp/static/media/001-home.953fde9a.svg",
+    "static/media/032-book.svg": "/GOTApp/static/media/032-book.fa60a0ed.svg",
+    "static/media/114-user.svg": "/GOTApp/static/media/114-user.cd00e783.svg",
     "static/media/App.css": "/GOTApp/static/media/gotfont.3af178ec.ttf",
-    "static/media/open-book.png": "/GOTApp/static/media/open-book.72cbb9d7.png",
     "static/media/worldMap.png": "/GOTApp/static/media/worldMap.ad946c0a.png"
   }
 }
