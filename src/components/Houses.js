@@ -9,10 +9,10 @@ class Houses extends React.Component {
     constructor(props) {
         super(props)
         this.state = {  id: '', query: ''}
-        this.props.reset();
     }
     
     async componentDidMount() {
+        this.props.reset();
         for (let i = 1; i <= 9; i++) {
             await this.props.listAllHouses(i);
         }
@@ -29,7 +29,6 @@ class Houses extends React.Component {
 
     render() {
         let houses = this.props.houses;
-        console.log(houses);
 
         let mergedArrays = [].concat.apply([], houses);
         mergedArrays.forEach((item, i) => {

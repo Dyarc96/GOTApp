@@ -11,6 +11,7 @@ class BookList extends React.Component {
     }
 
     async componentDidMount() {
+        this.props.reset();
         await this.props.listAllBooks()
     }
 
