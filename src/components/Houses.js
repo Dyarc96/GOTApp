@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import houseImg from '../img/pics/home.png';
+import houseImg from '../img/pics/001-home.svg';
 import { listAllHouses, reset } from '../actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';

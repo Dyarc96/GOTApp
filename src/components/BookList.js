@@ -1,5 +1,5 @@
 import React from 'react';
-import book_img from '../img/pics/open-book.png';
+import book_img from '../img/pics/032-book.svg';
 import { connect } from 'react-redux';
 import { listAllBooks, reset } from '../actions';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,6 @@ class BookList extends React.Component {
     constructor(props) {
         super(props)
         this.state = {  id: '' }
-        this.props.reset();
     }
 
     async componentDidMount() {
@@ -26,7 +25,7 @@ class BookList extends React.Component {
 
         const listAllBooks = this.props.books.length >= 1 ? books[0].map((book, index) => {
             return (
-                <Link to={`/books/${this.state.id}`} key={index}>
+                <Link to={`/books/${this.state.id}`} key={index} className="list__link">
                     <div className="card card__book" id={index + 1} onClick={this.handleClick}>
                         <div className="card__phoho-container">
                             <img src={book_img} className="card__photo" alt="default_img"/>

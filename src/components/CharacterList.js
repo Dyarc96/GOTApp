@@ -2,7 +2,7 @@ import React from 'react';
 import { listAllChars, reset } from '../actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import charImg from '../img/pics/user-silhouette.png'
+import charImg from '../img/pics/114-user.svg';
 import './App.css';
 
 class CharacterList extends React.Component {

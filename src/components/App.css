@@ -32,7 +32,6 @@ body {
 }
 
 .nav {
-    /* background:#3E4F59; */
     position: relative;
     margin-bottom: 50px;
 }
@@ -49,7 +48,6 @@ body {
     display: flex;
     margin: 5px;
     padding: 5px;
-    transition: 0.5s all;
 }
 
 
@@ -57,11 +55,11 @@ body {
     color: #ece8e3;
     font-size: 18px;
     text-decoration: none;
-    transition: all .5s;
+    transition: color .5s;
 }
 
 .nav__link:hover {
-    color: white;
+    color: #78140c;
 }
 
 .searchbar {
@@ -151,7 +149,7 @@ input::-webkit-input-placeholder {
     position: relative;
     text-align: center;
     overflow: hidden;
-    
+    box-shadow: 10px 10px 9px 4px rgba(0,0,0,0.5);
 }
 
 .card__book {
@@ -209,6 +207,7 @@ input::-webkit-input-placeholder {
 
 .container__element {
     justify-content: flex-end;
+    border-radius: 5px;
     width: 95%;
     padding: 10px;
     height: 100%;
@@ -227,7 +226,7 @@ input::-webkit-input-placeholder {
 .heading-primary {
     letter-spacing: 2.5px;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     font-size: 32px;
     color: 	#837045;
     padding-bottom: 2.5px;
@@ -257,12 +256,9 @@ input::-webkit-input-placeholder {
 
 .heading-tertiary {
     margin: 15px;
+    font-size: 25px;
     color: #837045;
     text-align: center;
-}
-
-.list__item {
-    margin: 15px 0;
 }
 
 .list__link {
@@ -285,9 +281,23 @@ input::-webkit-input-placeholder {
     font-size: 20px;
 }
 
+.paragraph-secondary {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
 @media screen and (max-width: 800px) {
     .searchbar {
         align-self: center;
+        height: 100%;
         margin: 0 auto;
+    }
+
+    .paragraph-secondary {
+        font-size: 15px;
+    }
+
+    .heading-secondary {
+        font-size: 20px;
     }
 }

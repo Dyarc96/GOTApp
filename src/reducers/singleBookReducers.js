@@ -5,14 +5,15 @@ import {
 } from '../actions/types';
 
 const initialState = {
-        arr: []
+        povChars: [],
+        chars: []
 }
 
 export const povCharacterReducer = (state = initialState, action) => {
     if (action.type === RENDER_POV_CHARACTERS) {
         return {
             ...state,
-            arr: [...state.arr, action.payload]
+            povChars: [...state.povChars, action.payload]
         }
     } else {
         return state
@@ -31,7 +32,7 @@ export const charactersReducer = (state = initialState, action) => {
     if (action.type === RENDER_CHARACTERS) {
         return {
             ...state,
-            arr: [...state.arr, action.payload]
+            chars: [...state.chars, action.payload]
         }
     } else {
         return state;

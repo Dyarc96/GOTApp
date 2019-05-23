@@ -38,8 +38,15 @@ class SingleCharacter extends React.Component {
             }
             // ALLEGIANCES
             if (this.props.character[11]) {
-                for(const allegiance of this.props.character[11])
-                await this.props.renderAllegiances(allegiance.toString().slice(45))
+                if(this.props.character[11] == "") {
+                    return null
+                } else if (this.props.character[11][0].length <= 44) {
+                    for(const allegiance of this.props.character[11])
+                    await this.props.renderAllegiances(allegiance.toString().slice(41))
+                } else if (this.props.character[11][0].length > 44) {
+                    for(const allegiance of this.props.character[11])
+                    await this.props.renderAllegiances(allegiance.toString().slice(45))
+                }
             }
             if(this.props.character[12]) {
                 for (const book of this.props.character[12]) {
@@ -96,8 +103,15 @@ class SingleCharacter extends React.Component {
                 
                 // ALLEGIANCES
                 if (this.props.character[11]) {
-                    for(const allegiance of this.props.character[11])
-                    await this.props.renderAllegiances(allegiance.toString().slice(45))
+                    if(this.props.character[11] == "") {
+                        return null
+                    } else if (this.props.character[11][0].length <= 44) {
+                        for(const allegiance of this.props.character[11])
+                        await this.props.renderAllegiances(allegiance.toString().slice(41))
+                    } else if (this.props.character[11][0].length > 44) {
+                        for(const allegiance of this.props.character[11])
+                        await this.props.renderAllegiances(allegiance.toString().slice(45))
+                    }
                 }
 
                 if(this.props.character[12]) {
@@ -133,22 +147,22 @@ class SingleCharacter extends React.Component {
             return <span key={index}>{element}, </span>
         }) : null
 
-        const listBooks = this.props.books.length > 0 ? this.props.books.map((povChar, index) => {
+        const listBooks = this.props.books ? this.props.books.map((povChar, index) => {
             console.log(povChar)
             const route = povChar.url.length <= 44 ? povChar.url.toString().slice(41) : povChar.url.toString().slice(44)
             const namePicker = povChar.name ? povChar.name : povChar.aliases[0]
             return <span key={index}><Link to={`/books/${route}`} className="list__link">{namePicker}, </Link></span>
             }) : null
         
-        const listPovBooks = this.props.povBooks.length > 0 ? this.props.povBooks.map((povChar, index) => {
+        const listPovBooks = this.props.povBooks ? this.props.povBooks.map((povChar, index) => {
             const route = povChar.url.length <= 44 ? povChar.url.toString().slice(41) : povChar.url.toString().slice(44)
             const namePicker = povChar.name ? povChar.name : povChar.aliases[0]
             return <span key={index}><Link to={`/books/${route}`} className="list__link">{namePicker}, </Link></span>
             }) : null
 
 
-        const renderAllegiances = this.props.allegiances.length > 0 ? this.props.allegiances.map((element, index) => {
-            const elementUrl = (element.url ? (element.url.length < 49 ? element.url.toString().slice(45) : element.url.toString().slice(49)) : null);
+        const renderAllegiances = this.props.allegiances ? this.props.allegiances.map((element, index) => {
+            const elementUrl = (element.url ? (element.url.length <= 49 ? element.url.toString().slice(45) : element.url.toString().slice(49)) : null);
             return <span key={index}><Link to={`/houses/${elementUrl}`} className="list__link">{element.name}, </Link></span>
         }) : null
 
@@ -156,19 +170,19 @@ class SingleCharacter extends React.Component {
             <div className="container__element">
                 {character[1] && <h1 className="heading-tertiary">{character[1]}</h1>}
                 {!character[1] && <h1 className="heading-tertiary">{character[7]}</h1>}
-                {character[2] && <p>Gender: {character[2]}</p>}
-                {character[3] && <p>Culture: {character[3]}</p>}
-                {character[4] && <p>Born: {character[4]}</p>}
-                {character[5] && <p>Died: {character[5]}</p>}
-                {character[6] != "" && <p>Titles: {renderTitles}</p>}
-                {character[8] && <p >Father: <Link to={`/characters/${renderFatherLink}`} className="list__link" >{this.props.father[1]}</Link></p>}
-                {character[9] && <p>Mother: <Link to={`/characters/${renderMotherLink}`} className="list__link" >{this.props.mother[1]}</Link></p>}
-                {character[10] && <p>Spouse: <Link to={`/characters/${renderSpouseLink}`} className="list__link" >{this.props.spouse[1]}</Link></p>}
-                {character[11] != "" && <p>Allegiances: {renderAllegiances}</p>}
-                {character[12] != "" && <p>Books: {listBooks}</p>}
-                {character[13] != "" && <p>povBooks: {listPovBooks}</p>}
-                {character[14] != "" && <p>Tv Series: {renderTvSeries}</p>}
-                {character[15] != "" && <p>Played by: {character[15]}</p>}
+                {character[2] && <p className="paragraph-secondary">Gender: {character[2]}</p>}
+                {character[3] && <p className="paragraph-secondary">Culture: {character[3]}</p>}
+                {character[4] && <p className="paragraph-secondary">Born: {character[4]}</p>}
+                {character[5] && <p className="paragraph-secondary">Died: {character[5]}</p>}
+                {character[6] != "" && <p className="paragraph-secondary">Titles: {renderTitles}</p>}
+                {character[8] && <p className="paragraph-secondary" >Father: <Link to={`/characters/${renderFatherLink}`} className="list__link" >{this.props.father[1]}</Link></p>}
+                {character[9] && <p className="paragraph-secondary">Mother: <Link to={`/characters/${renderMotherLink}`} className="list__link" >{this.props.mother[1]}</Link></p>}
+                {character[10] && <p className="paragraph-secondary">Spouse: <Link to={`/characters/${renderSpouseLink}`} className="list__link" >{this.props.spouse[1]}</Link></p>}
+                {character[11] != "" && <p className="paragraph-secondary">Allegiances: {renderAllegiances}</p>}
+                {character[12] != "" && <p className="paragraph-secondary">Books: {listBooks}</p>}
+                {character[13] != "" && <p className="paragraph-secondary">povBooks: {listPovBooks}</p>}
+                {character[14] != "" && <p className="paragraph-secondary">Tv Series: {renderTvSeries}</p>}
+                {character[15] != "" && <p className="paragraph-secondary">Played by: {character[15]}</p>}
             </div>
         )
     }

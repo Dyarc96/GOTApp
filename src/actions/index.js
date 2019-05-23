@@ -1,4 +1,5 @@
 import gotapi from '../api/gotapi';
+import axios from 'axios';
 import {
     RESET,
     LIST_ALL_BOOKS,
@@ -22,6 +23,9 @@ import {
     RENDER_CHARACTERS,
     RENDER_POV_CHARACTERS
 } from './types';
+
+const CancelToken = axios.CancelToken;
+const source = CancelToken.source();
 
 // ESSENTIALS - LISTING ALL PAGE
 
@@ -63,9 +67,9 @@ export const renderHouse = id => async dispatch => {
     dispatch({ type: GET_HOUSE, payload: response.data });
 }
 
-export const renderBook = id => async dispatch => {
-    const response = await gotapi.get(`books/${id}`);
-
+export const renderBook = (id) => async dispatch => {
+    const response = await gotapi.get(`books/${id}`, {});
+    
     dispatch({ type: GET_BOOK, payload: response.data });
 }
 
@@ -148,13 +152,13 @@ export const renderSpouse = id => async dispatch => {
 
 // SINGLE BOOK
 
-export const renderCharacters = id => async dispatch => {
-    const response = await gotapi.get(`characters/${id}`);
+export const renderCharacters = (id) => async dispatch => {
+    const response = await gotapi.get(`characters/${id}`)
 
     dispatch({ type: RENDER_CHARACTERS, payload: response.data})
 }
 
-export const renderPovCharacters = id => async dispatch => {
+export const renderPovCharacters = (id) => async dispatch => {
     const response = await gotapi.get(`characters/${id}`)
 
     dispatch({ type: RENDER_POV_CHARACTERS, payload: response.data})

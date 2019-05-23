@@ -51,14 +51,14 @@ class SingleHouse extends React.Component {
             }
             // SWORN MEMBERS
             if (this.props.house[15]) {
-                if (this.props.house[15][0].length <= 49) {
+                if (this.props.house[15] == "") {
+                    return null
+                } else if (this.props.house[15][0].length <= 49) {
                     for (const member of this.props.house[15])
                     await this.props.renderMembers(member.toString().slice(45))
                 } else if (this.props.house[15][0].length > 49) {
                     for (const member of this.props.house[15])
                     await this.props.renderMembers(member.toString().slice(49))
-                } else if (this.props.house[15][0] === null) {
-                    return null
                 }
             }
         }
@@ -158,20 +158,20 @@ class SingleHouse extends React.Component {
         return (
             <div className="container__element">
                 <h2 className="heading-tertiary">{house[1]}</h2>
-                <p className="list__item">Region {house[2]}</p>
-                {house[3] && <p className="list__item" >Coat of Arms: {house[3]}</p>}
-                {house[4] && <p className="list__item" >Words: {house[4]}</p>}
-                {house[5] != "" && <p className="list__item" >Titles: {renderTitles}</p>}
-                {house[6] != "" && <p className="list__item" >Seat: {renderSeats}</p>}
-                {house[7] && <p className="list__item" >Current lord: <Link to={`/characters/${renderCurrentLordLink}`} className="list__link">{this.props.currentLord[1]}</Link></p>}
-                {house[11] && <p className="list__item" >Founder: <Link to={`/characters/${renderFounderLink}`} className="list__link">{this.props.founder[1]}</Link></p>}
-                {house[8] != "" && <p className="list__item" >Heir: <Link to={`/characters/${renderHeirLink}`} className="list__link">{this.props.heir[1]}</Link></p>}
-                {house[9] && <p className="list__item" >Overlord: <Link to={`/houses/${renderLink}`} className="list__link">{this.props.overlord[1]}</Link></p>}
-                {house[10] && <p className="list__item" >Age of founding: {house[10]}</p>}
-                {house[12] && <p className="list__item" >Died out: {house[14]}</p>}
-                {house[13] != "" && <p className="list__item" >Weapon: {house[13]}</p>}
-                {house[14] != "" && <p className="list__item" >Cadet branches: {renderCadets}</p>}
-                {house[15] != "" && <p className="list__item" >Sworn members: {renderMembers}</p>}
+                <p className="paragraph-secondary">Region: {house[2]}</p>
+                {house[3] && <p className="paragraph-secondary" >Coat of Arms: {house[3]}</p>}
+                {house[4] && <p className="paragraph-secondary" >Words: {house[4]}</p>}
+                {house[5] != "" && <p className="paragraph-secondary" >Titles: {renderTitles}</p>}
+                {house[6] != "" && <p className="paragraph-secondary" >Seat: {renderSeats}</p>}
+                {house[7] && <p className="paragraph-secondary" >Current lord: <Link to={`/characters/${renderCurrentLordLink}`} className="list__link">{this.props.currentLord[1]}</Link></p>}
+                {house[11] && <p className="paragraph-secondary" >Founder: <Link to={`/characters/${renderFounderLink}`} className="list__link">{this.props.founder[1]}</Link></p>}
+                {house[8] != "" && <p className="paragraph-secondary" >Heir: <Link to={`/characters/${renderHeirLink}`} className="list__link">{this.props.heir[1]}</Link></p>}
+                {house[9] && <p className="paragraph-secondary" >Overlord: <Link to={`/houses/${renderLink}`} className="list__link">{this.props.overlord[1]}</Link></p>}
+                {house[10] && <p className="paragraph-secondary" >Age of founding: {house[10]}</p>}
+                {house[12] && <p className="paragraph-secondary" >Died out: {house[14]}</p>}
+                {house[13] != "" && <p className="paragraph-secondary" >Weapon: {house[13]}</p>}
+                {house[14] != "" && <p className="paragraph-secondary" >Cadet branches: {renderCadets}</p>}
+                {house[15] != "" && <p className="paragraph-secondary" >Sworn members: {renderMembers}</p>}
             </div>
         )
     }

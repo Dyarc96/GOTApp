@@ -22,14 +22,20 @@ class App extends React.Component {
                 </header>
                 <Router history={history} basename={process.env.PUBLIC_URL + '/'}>
                     <Nav className="nav"/>
-                    <Route path="/" exact component={WelcomePage} />
-                    <Route path="/houses" exact component={Houses} />
-                    <Route path="/characters" exact component={CharacterList} />
-                    <Route path="/books" exact component={BooksList} />
-                    <Route path="/characters/:id" exact component={SingleCharacter} />
-                    <Route path="/houses/:id" exact component={SingleHouse}/>
-                    <Route path="/books/:id" exact component={SingleBook}/>
-                    <Route path="/map" exact component={Map}/>
+                    <Route path={`/`} exact component={WelcomePage} />
+                    <Route path={`/houses`} exact component={Houses}
+                    render={(routerProps) => <Houses routerProps={routerProps}/>}/>
+                    <Route path={`/characters`} exact component={CharacterList}
+                    render={(routerProps) => <CharacterList routerProps={routerProps}/>} />
+                    <Route path={`/books`} exact component={BooksList} 
+                    render={(routerProps) => <BooksList routerProps={routerProps}/>}/>
+                    <Route path={`/characters/:id`} exact component={SingleCharacter} 
+                    render={(routerProps) => <SingleCharacter routerProps={routerProps}/>}/>
+                    <Route path={`/houses/:id`} exact component={SingleHouse}
+                    render={(routerProps) => <SingleHouse routerProps={routerProps}/>}/>
+                    <Route path={`/books/:id`} exact component={SingleBook}
+                    render={(routerProps) => <SingleBook routerProps={routerProps}/>}/>
+                    <Route path={`/map`} exact component={Map}/>
                 </Router>
             </div>
         )
