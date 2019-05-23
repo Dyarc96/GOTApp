@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2340406f69b1869385fe38d93b7bf73e",
+    "revision": "473071643e371b374b622af80f8a3235",
     "url": "/GOTApp/index.html"
   },
   {
-    "revision": "9fa050c0bf4197b666e4",
+    "revision": "b45936df7bd09410f42a",
     "url": "/GOTApp/static/css/main.d5bdf7a0.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GOTApp/static/js/2.a6917e2a.chunk.js"
   },
   {
-    "revision": "9fa050c0bf4197b666e4",
-    "url": "/GOTApp/static/js/main.7d170241.chunk.js"
+    "revision": "b45936df7bd09410f42a",
+    "url": "/GOTApp/static/js/main.bf698d96.chunk.js"
   },
   {
     "revision": "df7ddab12b65785a8861",
