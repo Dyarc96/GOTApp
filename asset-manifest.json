@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/GOTApp/static/css/main.d5bdf7a0.chunk.css",
-    "main.js": "/GOTApp/static/js/main.0d24cce5.chunk.js",
-    "main.js.map": "/GOTApp/static/js/main.0d24cce5.chunk.js.map",
+    "main.js": "/GOTApp/static/js/main.ac8ac4c9.chunk.js",
+    "main.js.map": "/GOTApp/static/js/main.ac8ac4c9.chunk.js.map",
     "runtime~main.js": "/GOTApp/static/js/runtime~main.d825a4e9.js",
     "runtime~main.js.map": "/GOTApp/static/js/runtime~main.d825a4e9.js.map",
     "static/js/2.a6917e2a.chunk.js": "/GOTApp/static/js/2.a6917e2a.chunk.js",
     "static/js/2.a6917e2a.chunk.js.map": "/GOTApp/static/js/2.a6917e2a.chunk.js.map",
     "index.html": "/GOTApp/index.html",
-    "precache-manifest.cb364e2ac2ab3ab6413072a5f6165249.js": "/GOTApp/precache-manifest.cb364e2ac2ab3ab6413072a5f6165249.js",
+    "precache-manifest.b40ca0c8e73b21c9846119cf94c44a3a.js": "/GOTApp/precache-manifest.b40ca0c8e73b21c9846119cf94c44a3a.js",
     "service-worker.js": "/GOTApp/service-worker.js",
     "static/css/main.d5bdf7a0.chunk.css.map": "/GOTApp/static/css/main.d5bdf7a0.chunk.css.map",
     "static/media/001-home.svg": "/GOTApp/static/media/001-home.953fde9a.svg",
