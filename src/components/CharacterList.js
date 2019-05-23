@@ -12,7 +12,6 @@ class CharacterList extends React.Component {
     }
 
     async componentDidMount() {
-        this.props.reset();
         for (let i = 1; i <= 43; i++) {
             await this.props.listAllChars(i);
         }
