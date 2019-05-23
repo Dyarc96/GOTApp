@@ -12,7 +12,6 @@ class Houses extends React.Component {
     }
     
     async componentDidMount() {
-        this.props.reset();
         for (let i = 1; i <= 9; i++) {
             await this.props.listAllHouses(i);
         }
